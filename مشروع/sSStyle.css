@@ -1,0 +1,278 @@
+/* تنسيقات أساسية وخطوط */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    direction: rtl; /* لغة عربية */
+    text-align: right;
+}
+
+/* تنسيقات الروابط العامة */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 1. شريط التنقل (Header/Navigation) */
+header {
+    background-color: #004d99; /* لون أزرق غامق */
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+nav a {
+    margin-right: 20px;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #0066cc;
+    border-radius: 5px;
+}
+
+/* 2. قسم البطل (Hero Section) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x500') center/cover no-repeat;
+    /* ملاحظة: قم بتغيير الرابط إلى صورة مركز تجاري حقيقية */
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffc107; /* لون ذهبي/أصفر جذاب */
+    color: #333;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+/* تنسيقات الأقسام العامة */
+section {
+    padding: 60px 5%;
+    border-bottom: 1px solid #eee;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    color: #004d99;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #ffc107;
+    margin: 10px auto 0;
+}
+
+/* 3. قسم عن المركز (About Section) */
+.features {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+}
+
+.feature-item {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    flex: 1;
+}
+
+.feature-item h3 {
+    color: #0066cc;
+    margin-bottom: 10px;
+}
+
+/* 4. قسم أقسام المركز (Sections) */
+.section-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.section-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+    font-size: 3em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.section-card h3 {
+    color: #004d99;
+    margin-bottom: 10px;
+}
+
+/* 5. قسم العروض الخاصة (Offers) */
+.offers {
+    background-color: #e6f0ff; /* خلفية فاتحة للتمييز */
+    text-align: center;
+}
+
+.offer-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.offer-card h3 {
+    color: #e30000; /* لون أحمر للعروض */
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.offer-link {
+    display: inline-block;
+    color: #0066cc;
+    font-weight: 700;
+    margin-top: 10px;
+    border-bottom: 2px solid #0066cc;
+}
+
+/* 6. قسم التواصل (Contact) */
+.contact {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #004d99;
+    font-weight: 700;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1em;
+    text-align: right;
+}
+
+.contact-form button.cta-button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+/* 7. التذييل (Footer) */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* استجابة التصميم للأجهزة الأصغر (Mobile Responsiveness) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav {
+        margin-top: 10px;
+    }
+    nav a {
+        margin: 5px 10px;
+    }
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .features, .section-grid, .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature-item, .section-card, .contact-info, .contact-form {
+        width: 100%;
+        max-width: 400px; /* تحديد عرض أقصى للعرض العمودي */
+    }
+}
